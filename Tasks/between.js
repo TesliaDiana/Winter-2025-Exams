@@ -5,21 +5,10 @@
 
 const getValueBetween = (str, prefix, suffix) => {
   const positionOfPrefix = str.indexOf(prefix);
-
-  if (positionOfPrefix === -1) return '';
-
   const endPositionOfPrefix = positionOfPrefix + prefix.length;
-  str = str.substring(endPositionOfPrefix);
+  const positionOfSuffix = str.indexOf(suffix, endPositionOfPrefix);
 
-  if (suffix) {
-    const positionOfSuffix = str.indexOf(suffix);
-
-    if (positionOfSuffix === -1) return '';
-
-    str = str.substring(0, positionOfSuffix);
-  }
-
-  return str;
+  return str.substring(endPositionOfPrefix, positionOfSuffix);
 };
 
 module.exports = getValueBetween;
