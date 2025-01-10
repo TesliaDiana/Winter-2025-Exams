@@ -4,14 +4,17 @@
 // Compare two dictionaries
 
 const compare = (object1, object2) => {
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
-  if (keys1.join('-') !== keys2.join('-')) return false;
-  let isSame = true;
-  for (const key of keys1) {
-    isSame = isSame && object1[key] === object2[key];
+  const entries1 = Object.entries(object1);
+  const entries2 = Object.entries(object2);
+
+  for (let i = 0; i < entries1.length; i++) {
+    const [key1, value1] = entries1[i];
+    const [key2, value2] = entries2[i];
+
+    if (key1 !== key2 || value1 !== value2) return false;
+
   }
-  return isSame;
+  return true;
 };
 
 module.exports = compare;
