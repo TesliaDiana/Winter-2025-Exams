@@ -3,15 +3,15 @@
 // Refactor following solution
 // Compare two dictionaries
 
-const compare = (first_values, second_values) => {
-  const a = Object.keys(first_values);
-  const b = Object.keys(second_values);
-  if (a.join('-') !== b.join('-')) return false;
-  let e = true;
-  for (const c of a) {
-    e = e && first_values[c] === second_values[c];
+const compare = (object1, object2) => {
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+  if (keys1.join('-') !== keys2.join('-')) return false;
+  let isSame = true;
+  for (const key of keys1) {
+    isSame = isSame && object1[key] === object2[key];
   }
-  return e;
+  return isSame;
 };
 
 module.exports = compare;
