@@ -1,11 +1,13 @@
+'use strict';
+
 // Refactor following solution
 // Extract substring between prefix and suffix
 
-getvaluebetween = (str, p, s) => {
-  i = str.indexOf(p);
+const getvaluebetween = (str, p, s) => {
+  let i = str.indexOf(p);
   if (i === -1) return '';
   else {
-    k = i + p.length;
+    const k = i + p.length;
     str = str.substring(k);
     if (s) {
       i = str.indexOf(s);

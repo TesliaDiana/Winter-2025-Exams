@@ -22,5 +22,8 @@
   "homepage": "https://github.com/HowProgrammingWorks/Index",
   "scripts": {
     "test": "node --test"
+  },
+  "dependencies": {
+    "eslint": "^9.17.0"
   }
 }
