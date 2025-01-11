@@ -3,11 +3,11 @@
 // Refactor following solution
 // Copy all values from dict except listed
 
-const EXCEPT = (incomingvaluesarray, ...no) => {
-  Object.keys(incomingvaluesarray).forEach((Z) => {
-    if (no.includes(Z)) delete incomingvaluesarray[Z];
+const except = (object, ...excludeKeys) => {
+  Object.keys(object).forEach((key) => {
+    if (excludeKeys.includes(key)) delete object[key];
   });
-  return incomingvaluesarray;
+  return object;
 };
 
-module.exports = EXCEPT;
+module.exports = except;
