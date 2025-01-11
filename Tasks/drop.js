@@ -3,13 +3,13 @@
 // Refactor following solution
 // Delete listed keys from dictionary
 
-const DroP = (D, ...X) => {
-  Object.keys(D).forEach((_) => {
-    if (X.includes(_)) {
-      delete D[_];
+const drop = (object, ...excludeKeys) => {
+  Object.keys(object).forEach((key) => {
+    if (excludeKeys.includes(key)) {
+      delete object[key];
     }
   });
-  return D;
+  return object;
 };
 
-module.exports = DroP;
+module.exports = drop;
