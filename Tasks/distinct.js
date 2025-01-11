@@ -4,13 +4,15 @@
 // Return an array without duplicates
 
 const distinct = (data) => {
-  const uniqValues = new Set();
-  data.forEach((value) => {
-    if (!uniqValues.has(value)) {
-      uniqValues.add(value);
-    }
-  });
-  return [...uniqValues];
+  const uniqValues = [];
+
+  for (const value of data) {
+
+    if (!uniqValues.includes(value)) uniqValues.push(value);
+  
+  }
+  
+  return uniqValues;
 };
 
 module.exports = distinct;
