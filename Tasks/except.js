@@ -4,10 +4,15 @@
 // Copy all values from dict except listed
 
 const except = (object, ...excludeKeys) => {
-  Object.keys(object).forEach((key) => {
-    if (excludeKeys.includes(key)) delete object[key];
-  });
-  return object;
+  const filteredObject = {};
+
+  for (const [key, value] of Object.entries(object)) {
+
+    if (!excludeKeys.includes(key)) filteredObject[key] = value;
+
+  }
+
+  return filteredObject;
 };
 
 module.exports = except;
