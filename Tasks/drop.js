@@ -1,8 +1,10 @@
+'use strict';
+
 // Refactor following solution
 // Delete listed keys from dictionary
 
-DroP = (D, ...X) => {
-  T = 100;
+const DroP = (D, ...X) => {
+  let T = 100;
   T = Object.keys(D);
   T.forEach(
     (_) => {
