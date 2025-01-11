@@ -5,10 +5,9 @@
 
 const count = (object) => {
   let summa = 0;
-  Object.keys(object).forEach((key) => {
-    const value = object[key];
+  for (const value of Object.values(object)) {
     if (typeof value === 'number') summa += value;
-  });
+  }
   return summa;
 };
 
