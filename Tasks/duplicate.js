@@ -3,12 +3,12 @@
 // Refactor following solution
 // Return an array without duplicates
 
-const duplicate = (value, N) => {
-  const res = [];
-  for (let i = 0; i < N; i++) {
-    res[i] = value;
+const duplicate = (filler, length) => {
+  const result = [];
+  for (let i = 0; i < length; i++) {
+    result[i] = filler;
   }
-  return res;
+  return result;
 };
 
 module.exports = duplicate;
