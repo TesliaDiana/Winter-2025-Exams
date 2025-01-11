@@ -3,13 +3,13 @@
 // Refactor following solution
 // Sum all number values in dict
 
-const count = (obj) => {
-  let sum = 0;
-  Object.keys(obj).forEach((key) => {
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+const count = (object) => {
+  let summa = 0;
+  Object.keys(object).forEach((key) => {
+    const value = object[key];
+    if (typeof value === 'number') summa += value;
   });
-  return sum;
+  return summa;
 };
 
 module.exports = count;
