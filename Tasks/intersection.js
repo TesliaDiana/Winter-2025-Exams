@@ -4,14 +4,15 @@
 // Find an intersection of two dictionaries
 
 const intersection = (object1, object2) => {
-  for (const key of Object.keys(object1)) {
-    if (object1[key] === object2[key]) {
-      object2[key] = object1[key];
-    } else {
-      delete object1[key];
-    }
+  const intersectionObject = {};
+
+  for (const [key, value] of Object.entries(object1)) {
+
+    if (value === object2[key]) intersectionObject[key] = value;
+
   }
-  return object1;
+
+  return intersectionObject;
 };
 
 module.exports = intersection;
