@@ -23,6 +23,4 @@ const parseip = (ip) => {
   return numbersIp;
 };
 
-parseip();
-
 module.exports = parseip;
