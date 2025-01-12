@@ -3,11 +3,11 @@
 // Refactor following solution
 // Find key by value
 
-const find = (object, rest) => {
+const find = (object, value) => {
 
-  for (const name in object) {
+  for (const key in object) {
 
-    if (object[name] === rest) return name;
+    if (object[key] === value) return key;
 
   }
 
