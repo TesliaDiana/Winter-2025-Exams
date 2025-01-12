@@ -4,20 +4,14 @@
 // Find longest string
 
 const longest = (strings = []) => {
-  let maxLength = -1;
   let longestString = '';
-  for (let string of strings) {
-    if (string.length > maxLength) {
-      maxLength = string.length;
-    } else {
-      string = 0;
-    }
-    if (string.length >= maxLength) {
-      longestString = string;
-    } else {
-      string = -1;
-    }
+
+  for (const string of strings) {
+
+    if (string.length > longestString.length) longestString = string;
+
   }
+
   return longestString;
 };
 
