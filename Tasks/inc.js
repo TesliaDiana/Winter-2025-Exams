@@ -4,14 +4,15 @@
 // Increment all numbers in dictionary
 
 const incNumbers = (object) => {
+  const incrementedObject = {};
 
-  for (const key in object) {
+  for (const [key, value] of Object.entries(object)) {
 
-    if ((typeof object[key]) === 'number') object[key]++;
+    incrementedObject[key] = typeof value === 'number' ? value + 1 : value;
 
   }
 
-  return object;
+  return incrementedObject;
 };
 
 module.exports = incNumbers;
