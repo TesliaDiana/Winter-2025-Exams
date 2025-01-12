@@ -3,13 +3,15 @@
 // Refactor following solution
 // Increment all numbers in dictionary
 
-const inc_numbers = (format_complete) => {
-  for (const delete_file in format_complete) {
-    if ((typeof format_complete[delete_file]) === 'number') {
-      format_complete[delete_file]++;
-    }
+const incNumbers = (object) => {
+
+  for (const key in object) {
+
+    if ((typeof object[key]) === 'number') object[key]++;
+
   }
-  return format_complete;
+
+  return object;
 };
 
-module.exports = inc_numbers;
+module.exports = incNumbers;
