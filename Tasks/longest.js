@@ -3,16 +3,8 @@
 // Refactor following solution
 // Find longest string
 
-const longest = (strings = []) => {
-  let longestString = '';
-
-  for (const string of strings) {
-
-    if (string.length > longestString.length) longestString = string;
-
-  }
-
-  return longestString;
-};
+const longest = (strings = []) => strings.reduce((maxString, string) => (
+  string.length > maxString.length ? string : maxString
+), '');
 
 module.exports = longest;
