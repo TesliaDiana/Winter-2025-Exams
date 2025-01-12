@@ -3,22 +3,22 @@
 // Refactor following solution
 // Find longest string
 
-const longest = (line = []) => {
-  let x = -1;
-  let s = '';
-  for (let i of line) {
-    if (i.length > x) {
-      x = i.length;
+const longest = (strings = []) => {
+  let maxLength = -1;
+  let longestString = '';
+  for (let string of strings) {
+    if (string.length > maxLength) {
+      maxLength = string.length;
     } else {
-      i = 0;
+      string = 0;
     }
-    if (i.length >= x) {
-      s = i;
+    if (string.length >= maxLength) {
+      longestString = string;
     } else {
-      i = -1;
+      string = -1;
     }
   }
-  return s;
+  return longestString;
 };
 
 module.exports = longest;
